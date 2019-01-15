@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Автоматическое определение размера стихотворной строки</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class=page>
+  <h1>Автоматическое определение размера стихотворной строки</h1>
+  <div class=metanav>
+    <a href="{{ url_for('login') }}">Input</a>
+  </div>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+</div>
